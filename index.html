@@ -1,4 +1,4 @@
-<!-- The header element should have a 1px, goldenrod border.
+!-- The header element should have a 1px, goldenrod border.
 Convert the ul in the navigation element into a series of horizontal links with # as the href value, without bullets, and have some space between them horizontally.
 Ensure that the navigation is semantically marked as such (i.e. wrap it in the correct HTML tag).
 Any text in an element with class "disabled" should be colored grey, unless it is an attribute of an anchor tag. If it is an attribute of an anchor tag, it should be colored purple.
@@ -22,72 +22,75 @@ Without adding any other attributes to the input fields in the footer, write a C
     <title>Document</title>
 </head>
 <body>
-    <header>
+  <header>
+    <nav> <!-- 3. Ensure that the navigation is semantically marked as such (i.e. wrap it in the correct HTML tag). -->
+        <div><a href="#">Home</a></div>
+        <div><a href="#">Profile</a></div>
+        <div><a href="#">Blog</a></div>
+    </nav>
+  </header>
+  <article> <!-- 6. Section elements should be contained within an article element. -->
+
+    <section>
+      <div class="month-list">
         <ul>
-          <li>Home</li>
-          <li>Profile</li>
-          <li>Blog</li>
+          <li>
+            <a href="#">January</a>
+            <span class="disabled">My favorite month</span>
+          </li>
+          <li>
+            <a href="#">
+              <span class="active">February</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="disabled">March</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">April</a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="promo">
+                <span class="disabled">May</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">June</a>
+          </li>
+          <li>
+            <a href="#">July</a>
+          </li>
+          <li>
+            <a href="#">August</a>
+            <span class="disabled">My least favorite month</span>
+          </li>
+          <li>
+            <a href="#" class="disabled">September</a>
+          </li>
         </ul>
-      </header>
-      
-      <section>
-        <div class="month-list">
-          <ul>
-            <li>
-              <a href="#January">January</a>
-              <span class="disabled">My favorite month</span>
-            </li>
-            <li>
-              <a href="#February">
-                <span class="active">February</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="disabled">March</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">April</a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="promo">
-                  <span class="disabled">May</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">June</a>
-            </li>
-            <li>
-              <a href="#">July</a>
-            </li>
-            <li>
-              <a href="#">August</a>
-              <span class="disabled">My least favorite month</span>
-            </li>
-            <li>
-              <a href="#" class="disabled">September</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      
-      <section>
-        <div class="grandparent">
-          <div class="parent">
-            <h4>Child of parent</h4>
-            <div>
-              <div>I'm red!</div>
-              <h4>I'm red's sister
-              <div>I'm blue!</div>
-              <h4>I'm blue's brother</h4>
-            </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="grandparent">
+        <div class="parent">
+          <h4>Child of parent</h4>
+          <div>
+            <div>I'm red!</div>
+            <h4>I'm red's sister</h4> <!-- 7. There are two missing closing tags in this document. Make sure you add them back in. -->
+            <div>I'm blue!</div>
+            <h4>I'm blue's brother</h4>
           </div>
-          <h4>Child of grandparent</h4>
         </div>
-      </section>
+        <h4>Child of grandparent</h4>
+      </div>
+    </section>
+
+  </article>
       
       <footer class="padded">
       
